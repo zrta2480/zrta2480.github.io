@@ -91,7 +91,6 @@ section {
 .sec4 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: rgb(194, 205, 90);
 }
 
 .sec5 {
@@ -102,7 +101,6 @@ section {
 .sec6 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: blue;
 }
 
 .active {
@@ -215,7 +213,7 @@ section {
 }
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);
-  height: 80%;
+  height: 85%;
   width: 68%;
   margin-left: 4rem;
   background-color: var(--color-black);
@@ -406,6 +404,89 @@ section {
   color: var(--color-grey-2);
 }
 
+/* Portfolio */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+  grid-gap: 2rem;
+}
+
+.card-item {
+  position: relative;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  border: 1px solid var(--color-grey-5);
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.card-item:hover {
+  cursor: default;
+  transform: translateY(-5px);
+  border: 1px solid var(--color-secondary);
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.32);
+}
+.card-item:hover .hidden-info {
+  display: block;
+}
+.card-item .card-item-date {
+  padding: 0.2rem 0.6rem;
+  background-color: var(--color-grey-5);
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.card-item h5 {
+  padding: 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.card-item h5 span {
+  color: var(--color-grey-2);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.card-item p {
+  color: var(--color-grey-2);
+}
+.card-item .hidden-info {
+  display: none;
+}
+.card-item .icons {
+  display: flex;
+}
+.card-item .icons p {
+  font-size: 1.2rem;
+}
+.card-item .icons .icon {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.card-item .icons .icon i {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin: 0 1rem;
+}
+.card-item .icons .icon:hover {
+  background-color: var(--color-white);
+}
+.card-item .icons .icon:hover i {
+  color: var(--color-primary);
+}
+
 /* Resume Content */
 .resume-container {
   text-align: center;
@@ -420,6 +501,89 @@ section {
 .resume-container .note {
   font-style: italic;
   padding-top: 1rem;
+}
+
+/* Contact Section */
+.contact-content-con {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+  grid-gap: 2rem;
+}
+.contact-content-con .left-contact {
+  flex: 2;
+}
+.contact-content-con .left-contact h4 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding-bottom: 2.5rem;
+}
+.contact-content-con .left-contact p {
+  margin: 1rem 0;
+  line-height: 2rem;
+}
+.contact-content-con .left-contact .contact-info .contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-content-con .left-contact .contact-info .contact-item p {
+  margin: 0.3rem 0 !important;
+  padding: 0 !important;
+}
+.contact-content-con .left-contact .contact-info .contact-item .icon {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}
+.contact-content-con .left-contact .contact-info .contact-item .icon i {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.contact-content-con .left-contact .contact-icon {
+  display: flex;
+  margin-top: 2rem;
+}
+.contact-content-con .left-contact .contact-icon a {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  background-color: var(--color-grey-5);
+  cursor: pointer;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 0.4rem;
+  transition: all 0.4s ease-in-out;
+}
+.contact-content-con .left-contact .contact-icon a:hover {
+  background-color: var(--color-secondary);
+}
+.contact-content-con .left-contact .contact-icon a:hover i {
+  color: var(--color-primary);
+}
+.contact-content-con .left-contact .contact-icon a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+.contact-content-con .right-contact {
+  display: grid;
+  align-items: center;
+  padding-left: 2rem;
+}
+.contact-content-con .right-contact h4 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding-bottom: 2.5rem;
+}
+.contact-content-con .right-contact .links .link-con {
+  padding-bottom: 2rem;
 }
 
 /* Independent Components */
